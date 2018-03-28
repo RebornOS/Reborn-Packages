@@ -8,10 +8,9 @@ license=(GPL)
 url="https://github.com/keeganmilsten/welcome"
 makedepends=('git')
 depends=('python-gobject' 'python-pydbus' 'webkit2gtk' 'python-simplejson' 'notification-daemon' 'pamac')
-source=("${_pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/${_pkgname}/archive/${pkgver}.tar.gz")
 
 package() {
-    cd "${srcdir}/${_pkgname}-${pkgver}"
+    cd "src/${_pkgname}-${pkgver}"
 
     # Install antergos-welcomed (dbus service)
     install -d "${pkgdir}/usr/share/antergos/welcomed"
