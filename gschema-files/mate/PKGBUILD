@@ -1,0 +1,23 @@
+# Maintainer: Keegan Milsten <willnhalt@gmail.com>
+
+pkgname=reborn-mate-schemas
+_pkgname=reborn-mate-schemas
+pkgver=1.1
+pkgrel=1.1
+pkgdesc="Setup configuration for Mate Reborn"
+url="https://github.com/keeganmilsten/reborn-schemas/"
+arch=('any')
+license=('GPL2')
+depends=('gsettings-desktop-schemas' 'dconf')
+#replaces=('antergos-desktop' 'antergos-gsettings')
+source=("reborn-schemas-${pkgver}.tar.gz::https://codeload.github.com/keeganmilsten/reborn-schemas/tar.gz/${pkgver}")
+install=schema.install
+package() {
+    cd "${srcdir}/reborn-schemas-${pkgver}"
+
+    install -d "${pkgdir}/usr/share/glib-2.0/schemas"
+
+    install -Dm644 95_mate.gschema.override  \
+        "${pkgdir}/usr/share/glib-2.0/schemas/95_mate.gschema.override"
+}
+md5sums=('a732c8cd3f76b7f434ce709f36e764c8')

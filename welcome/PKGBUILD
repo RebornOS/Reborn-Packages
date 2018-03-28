@@ -1,0 +1,60 @@
+pkgname=reborn-welcome
+_pkgname=welcome
+pkgver=0.1
+pkgrel=0.1
+pkgdesc='Welcome screen for Reborn OS'
+arch=(any)
+license=(GPL)
+url="https://github.com/keeganmilsten/welcome"
+makedepends=('git')
+depends=('python-gobject' 'python-pydbus' 'webkit2gtk' 'python-simplejson' 'notification-daemon' 'pamac')
+source=("${_pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/${_pkgname}/archive/${pkgver}.tar.gz")
+
+package() {
+    cd "${srcdir}/${_pkgname}-${pkgver}"
+
+    # Install antergos-welcomed (dbus service)
+    install -d "${pkgdir}/usr/share/antergos/welcomed"
+    cp -R src/welcomed/. "${pkgdir}/usr/share/antergos/welcomed"
+    install -Dm755 bin/antergos-welcomed "${pkgdir}/usr/bin/antergos-welcomed"
+
+    # Install antergos-welcomed service file
+    install -d "${pkgdir}/usr/lib/systemd/system"
+    install -m644 dbus/welcomed.service \
+        "${pkgdir}/usr/lib/systemd/system/welcomed.service"
+
+    # Install d-bus setup files
+    install -d "${pkgdir}/usr/share/dbus-1/system-services"
+    install -m644 dbus/com.antergos.welcome.service \
+        "${pkgdir}/usr/share/dbus-1/system-services/com.antergos.welcome.service"
+    install -d "${pkgdir}/etc/dbus-1/system.d"
+    install -m644 dbus/com.antergos.welcome.conf \
+        "${pkgdir}/etc/dbus-1/system.d/com.antergos.welcome.conf"
+    install -d "${pkgdir}/usr/share/polkit-1/actions"
+    install -m644 dbus/com.antergos.welcome.policy \
+        "${pkgdir}/usr/share/polkit-1/actions/com.antergos.welcome.policy"
+
+    # Install antergos-welcome (client app)
+    install -d "${pkgdir}/usr/share/reborn/welcome"
+    cp src/*.py "${pkgdir}/usr/share/reborn/welcome"
+    install -Dm755 bin/antergos-welcome \
+        "${pkgdir}/usr/bin/antergos-welcome"
+    install -Dm644 antergos-welcome.desktop \
+        "${pkgdir}/usr/share/applications/antergos-welcome.desktop"
+    install -d "${pkgdir}/usr/share/reborn/welcome/data"
+    cp -R data/. "${pkgdir}/usr/share/reborn/welcome/data"
+}
+md5sums=('f875b03380b3cf179e671b8e02356482')
+md5sums=('f875b03380b3cf179e671b8e02356482')
+md5sums=('f875b03380b3cf179e671b8e02356482')
+md5sums=('f875b03380b3cf179e671b8e02356482')
+md5sums=('f875b03380b3cf179e671b8e02356482')
+md5sums=('f875b03380b3cf179e671b8e02356482')
+md5sums=('f875b03380b3cf179e671b8e02356482')
+md5sums=('f875b03380b3cf179e671b8e02356482')
+md5sums=('f875b03380b3cf179e671b8e02356482')
+md5sums=('f875b03380b3cf179e671b8e02356482')
+md5sums=('f875b03380b3cf179e671b8e02356482')
+md5sums=('f875b03380b3cf179e671b8e02356482')
+md5sums=('f875b03380b3cf179e671b8e02356482')
+md5sums=('f875b03380b3cf179e671b8e02356482')

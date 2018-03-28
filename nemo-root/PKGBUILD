@@ -1,0 +1,22 @@
+# Maintainer: Keegan Milsten <willnhalt@gmail.com>
+
+pkgname="nemo-root"
+_pkgname="nemo-root"
+pkgver=1.2
+pkgrel=1.1
+pkgdesc='Nemo opened with root privileges'
+url='https://github.com/keeganmilsten/Reborn-Packages/tree/master/nemo-root'
+arch=('any')
+license=('GPL3')
+depends=('nemo' 'gksu' 'libgksu')
+source=("${pkgname}-${pkgver}.tar.gz::https://codeload.github.com/keeganmilsten/${_pkgname}/tar.gz/${pkgver}")
+
+package() {
+    cd "${srcdir}/${_pkgname}-${pkgver}"
+
+    install -D -m 755 nemo-root.desktop \
+    	 "${pkgdir}/usr/share/applications/nemo-root.desktop"
+}
+md5sums=('ac1d35836f07559ccb0492f05604c607')
+md5sums=('ac1d35836f07559ccb0492f05604c607')
+md5sums=('ac1d35836f07559ccb0492f05604c607')

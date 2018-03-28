@@ -1,0 +1,1 @@
+/home/keegan/Dropbox/Linux/RebornOS-Repo/reborn-xfce-schemas-1.2-1.1-any.pkg.tar.xz.sig
