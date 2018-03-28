@@ -1,5 +1,5 @@
 builddir = /home/keegan/Reborn-Packages/welcome
-pkgbuild_sha256sum = c72b5170f54734cd6287da5d122e1b0d0fc03c673966229b48570fd2cd6b439e
+pkgbuild_sha256sum = 27238f5718a17633c5518e92c91ae4f5f3ebb84b19e26480970cf478752178fa
 buildenv = !distcc
 buildenv = color
 buildenv = !ccache

@@ -8,13 +8,13 @@ license=(GPL)
 url="https://github.com/keeganmilsten/welcome"
 makedepends=('git')
 depends=('python-gobject' 'python-pydbus' 'webkit2gtk' 'python-simplejson' 'notification-daemon' 'pamac')
-
+source=("https://github.com/keeganmilsten/welcome.git")
 package() {
-    cd "src/${_pkgname}-${pkgver}"
+    cd "/home/$USER/Reborn-Packages/welcome/src/${_pkgname}-${pkgver}"
 
     # Install antergos-welcomed (dbus service)
-    install -d "${pkgdir}/usr/share/antergos/welcomed"
-    cp -R src/welcomed/. "${pkgdir}/usr/share/antergos/welcomed"
+    install -d "${pkgdir}/usr/share/reborn/welcomed"
+    cp -R src/welcomed/. "${pkgdir}/usr/share/reborn/welcomed"
     install -Dm755 bin/antergos-welcomed "${pkgdir}/usr/bin/antergos-welcomed"
 
     # Install antergos-welcomed service file
@@ -57,3 +57,5 @@ md5sums=('f875b03380b3cf179e671b8e02356482')
 md5sums=('f875b03380b3cf179e671b8e02356482')
 md5sums=('f875b03380b3cf179e671b8e02356482')
 md5sums=('f875b03380b3cf179e671b8e02356482')
+md5sums=('6ff2551494e136c7256ff7b9378fe51a')
+md5sums=('6ff2551494e136c7256ff7b9378fe51a')
