@@ -323,11 +323,11 @@ class WelcomeWindow(Gtk.ApplicationWindow):
             print('Using relative path for data source.\
                    Non-production testing.')
             self._data_path = os.path.join(self._location, '../data/')
-        elif(os.path.exists('/usr/share/antergos/welcome/')):
-            print('Using /usr/share/antergos/welcome/ path.')
-            self._data_path = '/usr/share/antergos/welcome/'
+        elif(os.path.exists('/usr/share/reborn/welcome/')):
+            print('Using /usr/share/reborn/welcome/ path.')
+            self._data_path = '/usr/share/reborn/welcome/'
         else:
-            print('Unable to source the antergos-welcome data directory.')
+            print('Unable to source the reborn-welcome data directory.')
             sys.exit(1)
 
     def on_maximize_toggle(self, action, value):

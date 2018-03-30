@@ -1,6 +1,6 @@
 pkgname=reborn-welcome
 _pkgname=welcome
-pkgver=0.1
+pkgver=0.2
 pkgrel=0.1
 pkgdesc='Welcome screen for Reborn OS'
 arch=(any)
@@ -10,7 +10,7 @@ makedepends=('git')
 depends=('python-gobject' 'python-pydbus' 'webkit2gtk' 'python-simplejson' 'notification-daemon' 'pamac')
 source=("https://github.com/keeganmilsten/welcome.git")
 package() {
-    cd "/home/$USER/Reborn-Packages/welcome/src/${_pkgname}-${pkgver}"
+    cd "/home/$USER/Reborn-Packages/welcome/src/${_pkgname}-${pkgrel}"
 
     # Install antergos-welcomed (dbus service)
     install -d "${pkgdir}/usr/share/reborn/welcomed"
@@ -57,5 +57,11 @@ md5sums=('f875b03380b3cf179e671b8e02356482')
 md5sums=('f875b03380b3cf179e671b8e02356482')
 md5sums=('f875b03380b3cf179e671b8e02356482')
 md5sums=('f875b03380b3cf179e671b8e02356482')
+md5sums=('6ff2551494e136c7256ff7b9378fe51a')
+md5sums=('6ff2551494e136c7256ff7b9378fe51a')
+md5sums=('6ff2551494e136c7256ff7b9378fe51a')
+md5sums=('6ff2551494e136c7256ff7b9378fe51a')
+md5sums=('6ff2551494e136c7256ff7b9378fe51a')
+md5sums=('6ff2551494e136c7256ff7b9378fe51a')
 md5sums=('6ff2551494e136c7256ff7b9378fe51a')
 md5sums=('6ff2551494e136c7256ff7b9378fe51a')
