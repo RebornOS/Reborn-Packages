@@ -261,7 +261,7 @@ class WelcomeWindow(Gtk.ApplicationWindow):
         self.set_title('')
         self.set_geometry(768, 496)
 
-        icon_dir = os.path.join(self._data_path, 'img/logos', 'antergos.png')
+        icon_dir = os.path.join(self._data_path, 'data/img/logos', 'antergos.png')
         if os.path.exists(icon_dir):
             self.set_icon_from_file(icon_dir)
         else:
