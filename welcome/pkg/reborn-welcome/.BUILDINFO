@@ -1,5 +1,5 @@
 builddir = /home/keegan/Reborn-Packages/welcome
-pkgbuild_sha256sum = 40fd271d25eab24b206c5e2106e3dd96ed656b88d028a21df81c85cb49a416b0
+pkgbuild_sha256sum = 5df83c81f4b1f1cc346f477d783a0a874c79b3a0fe41623dfa060273b8a4e9ed
 buildenv = !distcc
 buildenv = color
 buildenv = !ccache
@@ -1157,7 +1157,7 @@ installed = re2-20180301-1
 installed = readline-7.0.003-1
 installed = reborn-gnome-schemas-1.1-1.1
 installed = reborn-updates-1.10-1
-installed = reborn-welcome-0.2-0.1
+installed = reborn-welcome-0.3-0.1
 installed = reborn-xfce-schemas-1.2-1.1
 installed = rebornos-keyring-20180302-1
 installed = redland-1:1.0.17-4
