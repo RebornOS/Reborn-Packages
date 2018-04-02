@@ -10,7 +10,7 @@ makedepends=('git')
 depends=('python-gobject' 'python-pydbus' 'webkit2gtk' 'python-simplejson' 'notification-daemon' 'pamac')
 source=("https://github.com/keeganmilsten/welcome.git")
 package() {
-    cd "/home/$USER/Reborn-Packages/welcome/src/${_pkgname}-${pkgrel}"
+    cd "/home/$USER/Reborn-Packages/welcome/src-true/${_pkgname}-${pkgrel}"
 
     # Install antergos-welcomed (dbus service)
     install -d "${pkgdir}/usr/share/reborn/welcomed"
