@@ -1,2 +1,2 @@
 #!/bin/bash
-python -Wall /usr/share/reborn/welcome/antergos-welcome.py $1 $2 $3 $4
+python -Wall /usr/share/antergos/welcome/antergos-welcome.py $1 $2 $3 $4
