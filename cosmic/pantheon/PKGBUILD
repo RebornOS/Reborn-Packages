@@ -6,22 +6,4 @@ pkgdesc='Cosmic package for Elementary Reborn'
 url='https://github.com/keeganmilsten/Reborn-Packages/tree/master/cosmic/pantheon'
 arch=('any')
 license=('GPL3')
-depends=('dconf-editor' 'libdvdcss' 'pavucontrol' 'pulseaudio' 'pulseaudio-bluetooth' 'qt5-styleplugins' 'xf86-input-libinput' 'xorg-server' 'cinnamon' 'brasero' 'baobab' 'antergos-gnome-defaults-list' 'eog' 'evince' 'file-roller' 'gedit' 'gnome-calculator' 'gnome-common' 'gnome-disk-utility' 'gnome-font-viewer' 'gnome-keyring' 'gnome-music' 'gnome-photos' 'gnome-screenshot' 'gnome-system-monitor' 'gnome-terminal' 'gnome-themes-standard' 'hicolor-icon-theme' 'libgnome-keyring' 'muffin' 'networkmanager-openvpn' 'networkmanager-pptp' 'pamac' 'python-pysmbc' 'qt5ct' 'totem' 'xdg-user-dirs-gtk' 'zuki-themes' 'reborn-cinnamon-schemas' 'flatplat-blue-theme' 'gnome-software' 'pragha' 'elementary-icon-theme' 'plank' 'gtk-theme-macos-sierra-archers-git')
-source=("${pkgname}-${pkgver}.tar.gz::https://codeload.github.com/RebornOS/${_pkgname}/tar.gz/1.1")
-
-package() {
-    cd "${srcdir}/${_pkgname}-1.1"
-
-    install -D -m 777 plank.desktop \
-    	 "${pkgdir}/etc/xdg/autostart/plank.desktop"
-
-    install -D -m 777 plank.sh \
-    	 "${pkgdir}/usr/bin/plank.sh"
-}
-md5sums=('16a7530c9c50f8c9e020e982fd7ab703')
-md5sums=('16a7530c9c50f8c9e020e982fd7ab703')
-md5sums=('16a7530c9c50f8c9e020e982fd7ab703')
-md5sums=('16a7530c9c50f8c9e020e982fd7ab703')
-md5sums=('16a7530c9c50f8c9e020e982fd7ab703')
-md5sums=('16a7530c9c50f8c9e020e982fd7ab703')
-md5sums=('16a7530c9c50f8c9e020e982fd7ab703')
+depends=('dconf-editor' 'libdvdcss' 'pavucontrol' 'pulseaudio' 'pulseaudio-bluetooth' 'qt5-styleplugins' 'xf86-input-libinput' 'xorg-server' 'cinnamon' 'brasero' 'baobab' 'antergos-gnome-defaults-list' 'eog' 'evince' 'file-roller' 'gedit' 'gnome-calculator' 'gnome-common' 'gnome-disk-utility' 'gnome-font-viewer' 'gnome-keyring' 'pantheon-photos' 'gnome-screenshot' 'gnome-system-monitor' 'pantheon-terminal-git' 'pantheon-videos-git' 'gnome-themes-standard' 'hicolor-icon-theme' 'libgnome-keyring' 'muffin' 'networkmanager-openvpn' 'networkmanager-pptp' 'pamac' 'python-pysmbc' 'qt5ct' 'xdg-user-dirs-gtk' 'zuki-themes' 'reborn-cinnamon-schemas' 'flatplat-blue-theme' 'gnome-software' 'pantheon-music' 'elementary-icon-theme' 'plank' 'gtk-theme-macos-sierra-archers-git' 'macos-arc-white-theme')
