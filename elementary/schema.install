@@ -1,0 +1,15 @@
+pre_install() {
+    mkdir /usr/share/cinnamon/extensions
+}
+
+post_install() {
+    /usr/bin/glib-compile-schemas /usr/share/glib-2.0/schemas
+    unzip -d /usr/share/cinnamon/applets/ /usr/share/cinnamon/applets/slingshot@jfarthing84.zip
+    unzip -d /usr/share/cinnamon/extensions/ /usr/share/cinnamon/extensions/transparent-panels@germanfr.zip
+mv /usr/share/cinnamon/extensions/settings-schema.json /usr/share/cinnamon/extensions/transparent-panels@germanfr/
+unzip -d /usr/share/themes/ /usr/share/themes/elementary.zip
+}
+
+post_upgrade() {
+    /usr/bin/glib-compile-schemas /usr/share/glib-2.0/schemas
+}

@@ -1,0 +1,56 @@
+pkgname=elementary-theme
+pkgver=1.3
+_pkgver=1.1
+_pkgname=elementary-theme
+pkgrel=1.1
+pkgdesc='Setup Elementary Reborn'
+url='https://github.com/keeganmilsten/Reborn-Packages/tree/master/cosmic/pantheon'
+arch=('any')
+license=('GPL3')
+depends=('unzip' 'elementary-icon-theme' 'plank')
+source=("${pkgname}-${_pkgver}.tar.gz::https://codeload.github.com/RebornOS/${_pkgname}/tar.gz/1.1")
+install=schema.install
+
+package() {
+    cd "${srcdir}/${_pkgname}-1.1"
+
+    install -D -m 777 plank.desktop \
+    	 "${pkgdir}/etc/xdg/autostart/plank.desktop"
+
+    install -D -m 777 plank.sh \
+    	 "${pkgdir}/usr/bin/plank.sh"
+
+   install -D -m 755 elementary.zip \
+         "${pkgdir}/usr/share/themes/elementary.zip"
+ 
+   install -D -m 777 elementaryos.jpg \
+         "${pkgdir}/usr/share/backgrounds/elementaryos.jpg"
+
+   install -D -m 755 transparent-panels@germanfr.zip \
+         "${pkgdir}/usr/share/cinnamon/extensions/transparent-panels@germanfr.zip"
+
+   install -D -m 777 settings-schema.json \
+         "${pkgdir}/usr/share/cinnamon/extensions/settings-schema.json"
+
+   install -D -m 755 slingshot@jfarthing84.zip \
+         "${pkgdir}/usr/share/cinnamon/applets/slingshot@jfarthing84.zip"
+
+    install -Dm644 98_cinnamon.gschema.override  \
+        "${pkgdir}/usr/share/glib-2.0/schemas/98_cinnamon.gschema.override"
+
+}
+md5sums=('009efcc6abfd4831ddbf56386e2951f3')
+md5sums=('756899ef3e18ea92ef01403bd3f4ed22')
+md5sums=('5d872837dcbab7484a8dbfad48d6f126')
+md5sums=('41175302a0ec8a3c6dfafbbd8eb9d63c')
+md5sums=('41175302a0ec8a3c6dfafbbd8eb9d63c')
+md5sums=('2894a156d9a7042bceb95bc603934d89')
+md5sums=('2894a156d9a7042bceb95bc603934d89')
+md5sums=('2894a156d9a7042bceb95bc603934d89')
+md5sums=('2894a156d9a7042bceb95bc603934d89')
+md5sums=('2894a156d9a7042bceb95bc603934d89')
+md5sums=('2894a156d9a7042bceb95bc603934d89')
+md5sums=('2894a156d9a7042bceb95bc603934d89')
+md5sums=('2894a156d9a7042bceb95bc603934d89')
+md5sums=('2894a156d9a7042bceb95bc603934d89')
+md5sums=('2894a156d9a7042bceb95bc603934d89')

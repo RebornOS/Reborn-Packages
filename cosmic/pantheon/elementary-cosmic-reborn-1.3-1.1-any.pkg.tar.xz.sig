@@ -1,0 +1,1 @@
+/home/keegan/Dropbox/Linux/RebornOS-Repo/elementary-cosmic-reborn-1.3-1.1-any.pkg.tar.xz.sig
