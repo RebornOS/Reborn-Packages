@@ -1,5 +1,5 @@
 pkgname=elementary-theme
-pkgver=1.3
+pkgver=1.7
 _pkgver=1.1
 _pkgname=elementary-theme
 pkgrel=1.1
@@ -38,6 +38,9 @@ package() {
     install -Dm644 98_cinnamon.gschema.override  \
         "${pkgdir}/usr/share/glib-2.0/schemas/98_cinnamon.gschema.override"
 
+    install -Dm644 net.launchpad.plank.gschema.xml  \
+        "${pkgdir}/usr/share/glib-2.0/net.launchpad.plank.gschema.xml"
+
 }
 md5sums=('009efcc6abfd4831ddbf56386e2951f3')
 md5sums=('756899ef3e18ea92ef01403bd3f4ed22')
@@ -54,3 +57,13 @@ md5sums=('2894a156d9a7042bceb95bc603934d89')
 md5sums=('2894a156d9a7042bceb95bc603934d89')
 md5sums=('2894a156d9a7042bceb95bc603934d89')
 md5sums=('2894a156d9a7042bceb95bc603934d89')
+md5sums=('f82514cf32a51de8ed6b8e818836c596')
+md5sums=('f82514cf32a51de8ed6b8e818836c596')
+md5sums=('187807e6bd21a92d2ce1a1f80d13725f')
+md5sums=('187807e6bd21a92d2ce1a1f80d13725f')
+md5sums=('187807e6bd21a92d2ce1a1f80d13725f')
+md5sums=('187807e6bd21a92d2ce1a1f80d13725f')
+md5sums=('187807e6bd21a92d2ce1a1f80d13725f')
+md5sums=('187807e6bd21a92d2ce1a1f80d13725f')
+md5sums=('187807e6bd21a92d2ce1a1f80d13725f')
+md5sums=('187807e6bd21a92d2ce1a1f80d13725f')

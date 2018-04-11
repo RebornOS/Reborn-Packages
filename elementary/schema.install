@@ -1,5 +1,7 @@
 pre_install() {
     mkdir /usr/share/cinnamon/extensions
+    rm -f /usr/share/glib-2.0/schemas/net.launchpad.plank.gschema.xml
+
 }
 
 post_install() {
@@ -8,6 +10,8 @@ post_install() {
     unzip -d /usr/share/cinnamon/extensions/ /usr/share/cinnamon/extensions/transparent-panels@germanfr.zip
 mv /usr/share/cinnamon/extensions/settings-schema.json /usr/share/cinnamon/extensions/transparent-panels@germanfr/
 unzip -d /usr/share/themes/ /usr/share/themes/elementary.zip
+mv /usr/share/glib-2.0/net.launchpad.plank.gschema.xml /usr/share/glib-2.0/schemas/net.launchpad.plank.gschema.xml
+
 }
 
 post_upgrade() {
