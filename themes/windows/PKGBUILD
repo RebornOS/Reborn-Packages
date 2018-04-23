@@ -1,0 +1,51 @@
+pkgname=windows-theme
+pkgver=1.1
+_pkgver=1.0
+_pkgname=windows-theme
+pkgrel=1.0
+pkgdesc='Setup Windows Reborn'
+url='https://github.com/RebornOS/Reborn-Packages/tree/master/themes/windows'
+arch=('any')
+license=('GPL3')
+depends=('unzip' 'cinnamon')
+source=("${pkgname}-${_pkgver}.tar.gz::https://codeload.github.com/RebornOS/${_pkgname}/tar.gz/1.0")
+install=schema.install
+
+package() {
+    cd "${srcdir}/${_pkgname}-1.0"
+
+   install -D -m 755 Windows-10.zip \
+         "${pkgdir}/usr/share/themes/Windows-10.zip"
+
+   install -D -m 777 windows-10.jpg \
+         "${pkgdir}/usr/share/backgrounds/windows-10.jpg" 
+
+   install -D -m 777 reborn-icon.png \
+         "${pkgdir}/usr/share/cinnamon/reborn-icon.png"
+
+   install -D -m 755 cortana.png \
+         "${pkgdir}/usr/share/icons/cortana.png"
+
+   install -D -m 755 Windows-10-Icons.zip \
+         "${pkgdir}/usr/share/icons/Windows-10-Icons.zip"
+
+   install -D -m 755 CinnVIIStarkMenu@NikoKrause.zip \
+         "${pkgdir}/usr/share/cinnamon/applets/CinnVIIStarkMenu@NikoKrause.zip"
+
+   install -D -m 755 IcingTaskManager@json.zip \
+         "${pkgdir}/usr/share/cinnamon/applets/IcingTaskManager@json.zip"
+
+   install -D -m 755 albert.conf \
+         "${pkgdir}/usr/share/albert/albert.conf"
+
+   install -D -m 755 alberting.desktop \
+         "${pkgdir}/usr/share/applications/alberting.desktop"
+
+   install -D -m 755 albert2.desktop \
+         "${pkgdir}/etc/xdg/autostart/albert2.desktop"
+
+    install -Dm644 97_cinnamon.gschema.override  \
+        "${pkgdir}/usr/share/glib-2.0/schemas/97_cinnamon.gschema.override"
+}
+md5sums=('1d6170b3154c1f1c582932212c5042de')
+md5sums=('ac480dd038929cb167bd8d5a2b0aaa33')
