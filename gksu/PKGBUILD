@@ -1,31 +1,34 @@
-# $Id: PKGBUILD 310007 2017-11-15 14:11:34Z foutrelis $
-# Maintainer: Jan de Groot <jgc@archlinux.org>
-# Contributor: Eduardo Lopes (eduol@gmx.net)
+# Maintainer: Dominik Fuchs <d.fuchs@mail.com>
 
 pkgname=gksu
-pkgver=2.0.2
-pkgrel=6
-pkgdesc="A graphical frontend for su"
-arch=('x86_64')
-url="http://www.nongnu.org/gksu/index.html"
+_pkgname=gtksu-git
+pkgver=0.0.r98.9372747
+pkgrel=1
+pkgdesc='A Qt5-based replacement for gksu'
+arch=('any')
+url='https://github.com/KeithDHedger/GtkSu'
 license=('GPL')
-depends=('libgksu>=2.0.12' 'xorg-xauth')
-makedepends=('gtk-doc' 'intltool')
-source=(https://people.debian.org/~kov/gksu/${pkgname}-${pkgver}.tar.gz)
-sha256sums=('a1de3dca039d88c195fcdc9516379439a1d699750417f1e655aa2101a955ee5a')
+depends=('qt5-base')
+makedepends=('git')
+provides=("gksu	")
+source=("$_pkgname::git+https://github.com/KeithDHedger/GtkSu.git#branch=master")
+md5sums=('SKIP')
+
+pkgver() {
+  cd $_pkgname
+  # git describe can't describe anything without tags
+  printf "0.0.r%d.%s\n" $(git rev-list HEAD --count) $(git rev-parse --short HEAD)
+}
 
 build() {
-  cd "${srcdir}/${pkgname}-${pkgver}"
-  ./configure --prefix=/usr \
-    --sysconfdir=/etc \
-    --localstatedir=/var \
-    --disable-static \
-    --disable-nautilus-extension
-  make
+   cd $_pkgname
+   ./configure --enable-qt5 --prefix=/usr
+   make || return 1
 }
 
 package() {
-  cd "${srcdir}/${pkgname}-${pkgver}"
-  make DESTDIR="${pkgdir}" install
-  rm -rf "${pkgdir}/usr/share/applications/"
+  cd $_pkgname
+  make DESTDIR="$pkgdir" install
+  cd $pkgdir/usr/bin
+  ln -s gtksu gksu
 }

@@ -2,13 +2,13 @@
 
 pkgname="nemo-root"
 _pkgname="nemo-root"
-pkgver=1.2
+pkgver=1.3
 pkgrel=1.1
 pkgdesc='Nemo opened with root privileges'
 url='https://github.com/keeganmilsten/Reborn-Packages/tree/master/nemo-root'
 arch=('any')
 license=('GPL3')
-depends=('nemo' 'gksu' 'libgksu')
+depends=('nemo' 'polkit')
 source=("${pkgname}-${pkgver}.tar.gz::https://codeload.github.com/keeganmilsten/${_pkgname}/tar.gz/${pkgver}")
 
 package() {
@@ -20,3 +20,4 @@ package() {
 md5sums=('ac1d35836f07559ccb0492f05604c607')
 md5sums=('ac1d35836f07559ccb0492f05604c607')
 md5sums=('ac1d35836f07559ccb0492f05604c607')
+md5sums=('1e3fd94b33cff711adf6a0c288f3b96f')

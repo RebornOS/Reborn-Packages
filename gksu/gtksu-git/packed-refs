@@ -1,0 +1,5 @@
+# pack-refs with: peeled fully-peeled sorted 
+93727477398d6c4eb90b2ae4cb51f671408572a3 refs/heads/master
+1267dfe50a04512d3576b155f4bedbafc4d8e1af refs/remotes/git-svn
+52cbf894281a870a0c9ef06f425567b61e2fe371 refs/tags/0.1.6
+52cbf894281a870a0c9ef06f425567b61e2fe371 refs/tags/GtkSu-0.1.6
