@@ -1,5 +1,5 @@
 pkgname=windows-theme
-pkgver=1.4
+pkgver=1.5
 _pkgver=1.0
 _pkgname=windows-theme
 pkgrel=1.0
@@ -55,3 +55,4 @@ md5sums=('ac480dd038929cb167bd8d5a2b0aaa33')
 md5sums=('ac480dd038929cb167bd8d5a2b0aaa33')
 md5sums=('8aa7343920597f87d309f387a807f6d4')
 md5sums=('0a21ffb4bbe81f8a1d2d20c12aaf93f5')
+md5sums=('052dd8da2393c30adf7ddba3b033dff4')

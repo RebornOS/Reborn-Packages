@@ -1,5 +1,5 @@
 pkgname=elementary-theme
-pkgver=1.7
+pkgver=2.1
 _pkgver=1.1
 _pkgname=elementary-theme
 pkgrel=1.1
@@ -32,8 +32,8 @@ package() {
    install -D -m 777 settings-schema.json \
          "${pkgdir}/usr/share/cinnamon/extensions/settings-schema.json"
 
-   install -D -m 755 slingshot@jfarthing84.zip \
-         "${pkgdir}/usr/share/cinnamon/applets/slingshot@jfarthing84.zip"
+   install -D -m 777 Cinnamenu@json.zip \
+         "${pkgdir}/usr/share/cinnamon/applets/Cinnamenu@json.zip"
 
     install -Dm644 98_cinnamon.gschema.override  \
         "${pkgdir}/usr/share/glib-2.0/schemas/98_cinnamon.gschema.override"
@@ -67,3 +67,9 @@ md5sums=('187807e6bd21a92d2ce1a1f80d13725f')
 md5sums=('187807e6bd21a92d2ce1a1f80d13725f')
 md5sums=('187807e6bd21a92d2ce1a1f80d13725f')
 md5sums=('187807e6bd21a92d2ce1a1f80d13725f')
+md5sums=('8f4e0d73bd3c6e33ec0e6ef7cbf34582')
+md5sums=('8f4e0d73bd3c6e33ec0e6ef7cbf34582')
+md5sums=('7b767d422f37167d718ae6efe5bb4786')
+md5sums=('7b767d422f37167d718ae6efe5bb4786')
+md5sums=('7b767d422f37167d718ae6efe5bb4786')
+md5sums=('7b767d422f37167d718ae6efe5bb4786')
