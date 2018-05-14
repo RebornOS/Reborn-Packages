@@ -1,0 +1,71 @@
+
+[org.gnome.software]
+download-updates = false
+show-nonfree-software = true
+allow-updates = false
+show-ratings = true
+
+[org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+use-theme-colors=false
+visible-name='reborn'
+
+[org.gnome.desktop.interface]
+clock-format='24h'
+clock-show-date=true
+clock-show-seconds=false
+gtk-theme='Arc'
+icon-theme='Apricity-Icons'
+
+[org.gnome.desktop.peripherals.touchpad]
+natural-scroll=true
+tap-to-click=true
+
+[org.gnome.desktop.screensaver]
+lock-enabled=false
+
+[org.gnome.desktop.session]
+idle-delay=0
+
+[org.gnome.desktop.datetime]
+automatic-timezone=true
+
+[org.gnome.desktop.input-sources]
+sources=[('xkb','us')]
+
+[org.gnome.desktop.wm.preferences]
+button-layout='appmenu:minimize,maximize,close'
+
+[org.gnome.shell.extensions.user-theme]
+name='Arctic-Apricity'
+
+[org.gnome.nautilus.preferences]
+show-create-link = true
+
+[org.gnome.shell]
+enabled-extensions=['dash-to-dock@micxgx.gmail.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'arch-update@RaphaelRochet', 'ApricityGnome@anassboulmane.gmail.com', 'alternate-tab@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com', 'status-menu-buttons@dev.antergos.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'TopIcons@phocean.net', 'Move_Clock@rmy.pobox.com']
+favorite-apps=['nautilus.desktop', 'gnome-terminal.desktop', 'chromium.desktop', 'gnome-music.desktop', 'pamac.desktop']
+always-show-log-out=true
+
+[org.gnome.settings-daemon.plugins.xsettings]
+antialiasing='rgba'
+
+[org.gnome.shell.extensions.dash-to-dock]
+background-opacity = '0'
+isolate-workspaces = true
+opaque-background = true
+show-show-apps-button = false
+dock-position 'BOTTOM'
+
+[org.gnome.shell.extensions.topicons]
+tray-pos = 'right'
+
+[org.gnome.mutter]
+center-new-windows = true
+dynamic-workspaces = true
+
+[org.gnome.desktop.background]
+show-desktop-icons = true
+picture-uri = 'file:///usr/share/backgrounds/elementary.jpg'
+
+[org.gnome.shell.extensions.activities-config]
+activities-config-button-no-text=true

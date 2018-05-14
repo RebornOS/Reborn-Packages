@@ -1,0 +1,17 @@
+#! /bin/bash
+
+post_install() {
+sudo unzip -d /usr/share/icons/  /usr/share/icons/Apricity-Icons.zip
+sudo unzip -d /usr/share/gnome-shell/extensions/ /usr/share/gnome-shell/extensions/ApricityGnome@anassboulmane.gmail.com.zip 
+sudo chmod -R 777 /usr/share/gnome-shell/extensions/ApricityGnome@anassboulmane.gmail.com
+sudo unzip -d /usr/share/gnome-shell/extensions/ /usr/share/gnome-shell/extensions/Move_Clock@rmy.pobox.com.v15.shell-extension.zip
+sudo chmod -R 777 /usr/share/gnome-shell/extensions/Move_Clock@rmy.pobox.com.v15.shell-extension
+sudo unzip -d /usr/share/themes/ /usr/share/themes/Arctic-Apricity.zip
+/usr/bin/glib-compile-schemas /usr/share/glib-2.0/schemas
+
+}
+
+post_upgrade() {
+    /usr/bin/glib-compile-schemas /usr/share/glib-2.0/schemas
+}
+

@@ -1,5 +1,5 @@
 pkgname=apricity-theme
-pkgver=1.0
+pkgver=1.1
 _pkgver=1.0
 _pkgname=apricity-theme
 pkgrel=1.1
@@ -30,6 +30,9 @@ package() {
     	 "${pkgdir}/usr/share/icons/Apricity-Icons.zip"
 
     install -D -m 777 Arctic-Apricity.zip \
-    	 "${pkgdir}/usr/share/icons/Arctic-Apricity.zip"
+    	 "${pkgdir}/usr/share/themes/Arctic-Apricity.zip"
 
 }
+
+md5sums=('7bac37ee7b31122ccbfad75076fe8b77')
+md5sums=('7bac37ee7b31122ccbfad75076fe8b77')
