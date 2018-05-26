@@ -1,1 +1,0 @@
-/home/keegan/Dropbox/Linux/RebornOS-Repo/gnome-cosmic-reborn-1.5-1-any.pkg.tar.xz.sig
