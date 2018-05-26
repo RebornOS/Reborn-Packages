@@ -1,5 +1,5 @@
 pkgname=apricity-theme
-pkgver=1.1
+pkgver=1.3
 _pkgver=1.0
 _pkgname=apricity-theme
 pkgrel=1.1
@@ -36,3 +36,6 @@ package() {
 
 md5sums=('7bac37ee7b31122ccbfad75076fe8b77')
 md5sums=('7bac37ee7b31122ccbfad75076fe8b77')
+md5sums=('621761232a50aa4b769f9896616ebe1d')
+md5sums=('621761232a50aa4b769f9896616ebe1d')
+md5sums=('58a0bb9407147339b12b637a90d743e1')

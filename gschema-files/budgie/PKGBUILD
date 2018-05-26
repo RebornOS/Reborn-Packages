@@ -2,7 +2,7 @@
 
 pkgname=reborn-budgie-schemas
 _pkgname=reborn-schemas
-pkgver=1.1
+pkgver=1.2
 pkgrel=1.1
 pkgdesc="Setup configuration for Budgie Reborn"
 url="https://github.com/keeganmilsten/reborn-schemas/"
@@ -10,12 +10,14 @@ arch=('any')
 license=('GPL2')
 depends=('gsettings-desktop-schemas' 'dconf')
 #replaces=('antergos-desktop' 'antergos-gsettings')
-source=("reborn-schemas-${pkgver}.tar.gz::https://codeload.github.com/keeganmilsten/reborn-schemas/tar.gz/${pkgver}")
+source=("reborn-schemas-${pkgver}.tar.gz::https://codeload.github.com/keeganmilsten/reborn-schemas/tar.gz/${pkgrel}")
 install=schema.install
 
 package() {
-    cd "${srcdir}/${_pkgname}-${pkgver}"
+    cd "${srcdir}/${_pkgname}-${pkgrel}"
     install -d "${pkgdir}/usr/share/glib-2.0/schemas"
     install -Dm644 95_budgie.gschema.override  \
         "${pkgdir}/usr/share/glib-2.0/schemas/95_budgie.gschema.override"
 }
+md5sums=('5d15ee4658640623f1b4622a5e856069')
+md5sums=('5d15ee4658640623f1b4622a5e856069')

@@ -2,7 +2,7 @@
 
 pkgname=reborn-gnome-schemas
 _pkgname=reborn-gnome-schemas
-pkgver=1.1
+pkgver=1.5
 pkgrel=1.1
 pkgdesc="Setup configuration for Gnome Reborn"
 url="https://github.com/keeganmilsten/reborn-schemas/"
@@ -10,11 +10,11 @@ arch=('any')
 license=('GPL2')
 depends=('gsettings-desktop-schemas' 'dconf')
 #replaces=('antergos-desktop' 'antergos-gsettings')
-source=("reborn-schemas-${pkgver}.tar.gz::https://codeload.github.com/keeganmilsten/reborn-schemas/tar.gz/${pkgver}")
+source=("reborn-schemas-${pkgver}.tar.gz::https://codeload.github.com/keeganmilsten/reborn-schemas/tar.gz/${pkgrel}")
 install=schema.install
 
 package() {
-    cd "${srcdir}/${_pkgname}-${pkgver}"
+    cd "${srcdir}/reborn-schemas-${pkgrel}"
 
     install -d "${pkgdir}/usr/share/glib-2.0/schemas"
 
@@ -22,3 +22,12 @@ package() {
         "${pkgdir}/usr/share/glib-2.0/schemas/95_gnome.gschema.override"
 }
 md5sums=('a732c8cd3f76b7f434ce709f36e764c8')
+md5sums=('5d15ee4658640623f1b4622a5e856069')
+md5sums=('5d15ee4658640623f1b4622a5e856069')
+md5sums=('5d15ee4658640623f1b4622a5e856069')
+md5sums=('fbbdde40cdc5a643e5a4d3c468ff8285')
+md5sums=('fbbdde40cdc5a643e5a4d3c468ff8285')
+md5sums=('71009f0cf6c5cbeb9ec1ffab06deb2f5')
+md5sums=('71009f0cf6c5cbeb9ec1ffab06deb2f5')
+md5sums=('f71d892b5beb028e9e71b193f58a0afb')
+md5sums=('f71d892b5beb028e9e71b193f58a0afb')
