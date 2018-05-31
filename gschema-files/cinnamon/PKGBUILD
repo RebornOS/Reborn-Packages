@@ -2,7 +2,8 @@
 
 pkgname=reborn-cinnamon-schemas
 _pkgname=reborn-cinnamon-schemas
-pkgver=1.1
+pkgver=1.2
+_pkgver=1.1
 pkgrel=1.1
 pkgdesc="Setup configuration for Cinnamon Reborn"
 url="https://github.com/keeganmilsten/reborn-schemas/"
@@ -10,11 +11,13 @@ arch=('any')
 license=('GPL2')
 depends=('gsettings-desktop-schemas' 'dconf')
 #replaces=('antergos-desktop' 'antergos-gsettings')
-source=("reborn-schemas-${pkgver}.tar.gz::https://codeload.github.com/keeganmilsten/reborn-schemas/tar.gz/${pkgver}")
+source=("reborn-schemas-${_pkgver}.tar.gz::https://codeload.github.com/keeganmilsten/reborn-schemas/tar.gz/${_pkgver}")
 install=schema.install
 package() {
-    cd "${srcdir}/reborn-schemas-${pkgver}"
+    cd "${srcdir}/reborn-schemas-${_pkgver}"
     install -d "${pkgdir}/usr/share/glib-2.0/schemas"
     install -Dm644 95_cinnamon.gschema.override  \
         "${pkgdir}/usr/share/glib-2.0/schemas/95_cinnamon.gschema.override"
 }
+md5sums=('f71d892b5beb028e9e71b193f58a0afb')
+md5sums=('26480c7786a6ac220496176b80098519')
