@@ -1,20 +1,20 @@
 # Maintainer: Caden Mitchell <sidedvirus@outlook.com>
-
 pkgname="lightstrafe"
 _pkgname="lightstrafe"
-pkgver=1.0
-pkgrel=1.0
-pkgdesc='A fun 3D shooting platformer game created by Caden Mitchell'
+pkgver=6.3
+pkgrel=6.3
+pkgdesc='A fun 3D shooting platformer game created by Caden Mitchell (SidedVirus)'
 url='https://github.com/CadenMitchell/lightstrafe/'
 arch=('any')
 license=('GPL3')
-depends=('libpng' 'libtiff' 'openexr' 'python' 'desktop-file-utils' 'python-requests' 'shared-mime-info' 'xdg-utils' 'hicolor-icon-theme' 'glew' 'python-numpy' 'freetype2' 'openal' 'ffmpeg' 'fftw' 'boost-libs' 'opencollada' 'alembic' 'openimageio' 'libsndfile' 'jack' 'opencolorio' 'jemalloc' 'libspnav' 'openvdb' 'log4cplus' 'sdl2')
+depends=('libpng' 'libtiff' 'openexr' 'python' 'desktop-file-utils' 'python-requests' 'shared-mime-info' 'xdg-utils' 'hicolor-icon-theme' 'glew' 'python-numpy' 'freetype2' 'openal' 'ffmpeg' 'fftw' 'boost-libs' 'opencollada' 'alembic' 'openimageio' 'libsndfile' 'jack' 'opencolorio' 'jemalloc' 'libspnav' 'openvdb' 'log4cplus' 'sdl2' 'unzip')
 source=("${pkgname}-${pkgver}.tar.gz::https://codeload.github.com/CadenMitchell/${_pkgname}/tar.gz/1.0")
+install=schema.install
 package() {
     cd "${srcdir}/${_pkgname}-1.0"
 
-    install -D -m 777 lightstrafe \
-    	 "${pkgdir}/usr/bin/lightstrafe"
+    install -D -m 777 lightstrafe.zip \
+    	 "${pkgdir}/usr/bin/lightstrafe.zip"
 
     install -D -m 755 lightstrafe.desktop \
     	 "${pkgdir}/usr/share/applications/lightstrafe.desktop"
@@ -22,6 +22,7 @@ package() {
     install -D -m 755 lightstrafe.png \
     	 "${pkgdir}/usr/share/icons/lightstrafe.png"
 }
+
 md5sums=('b7dc34be5ff7ef4f19a2ce86a49072c6')
 md5sums=('b7dc34be5ff7ef4f19a2ce86a49072c6')
 md5sums=('b7dc34be5ff7ef4f19a2ce86a49072c6')
@@ -30,3 +31,7 @@ md5sums=('a4557e53d62211360d5f1d9a17a62c2f')
 md5sums=('a4557e53d62211360d5f1d9a17a62c2f')
 md5sums=('a4557e53d62211360d5f1d9a17a62c2f')
 md5sums=('a4557e53d62211360d5f1d9a17a62c2f')
+
+md5sums=('554011886983a1f512041286794c598e')
+
+md5sums=('a985664c1f29e0fee17c8864e1b9626f')

@@ -1,0 +1,3 @@
+post_install() {
+unzip -d /usr/bin/ /usr/bin/lightstrafe.zip
+}
